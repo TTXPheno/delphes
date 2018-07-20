@@ -548,12 +548,12 @@ module Isolation MuonIsolation {
 
   set OutputArray muons
 
-#  set DeltaRMax 0.5
-  set DeltaRMax 0.
+  set DeltaRMax 0.5
+#  set DeltaRMax 0.
 
   set PTMin 0.5
 
-  set PTRatioMax 0.25
+  set PTRatioMax 999
 }
 
 ###################
@@ -785,12 +785,12 @@ module TreeWriter TreeWriter {
 # add Branch InputArray BranchName BranchClass
   add Branch Delphes/allParticles Particle GenParticle
 
-  add Branch TrackMerger/tracks Track Track
-  add Branch Calorimeter/towers Tower Tower
+#  add Branch TrackMerger/tracks Track Track
+#  add Branch Calorimeter/towers Tower Tower
 
-  add Branch HCal/eflowTracks EFlowTrack Track
-  add Branch ECal/eflowPhotons EFlowPhoton Tower
-  add Branch HCal/eflowNeutralHadrons EFlowNeutralHadron Tower
+#  add Branch HCal/eflowTracks EFlowTrack Track
+#  add Branch ECal/eflowPhotons EFlowPhoton Tower
+#  add Branch HCal/eflowNeutralHadrons EFlowNeutralHadron Tower
 
   add Branch GenJetFinder/jets GenJet Jet
   add Branch GenMissingET/momentum GenMissingET MissingET
@@ -800,7 +800,7 @@ module TreeWriter TreeWriter {
   add Branch UniqueObjectFinder/photons Photon Photon
   add Branch UniqueObjectFinder/muons Muon Muon
 
-  add Branch FatJetFinder/jets FatJet Jet
+#  add Branch FatJetFinder/jets FatJet Jet
 
   add Branch MissingET/momentum MissingET MissingET
   add Branch ScalarHT/energy ScalarHT ScalarHT

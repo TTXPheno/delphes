@@ -513,12 +513,11 @@ module Isolation ElectronIsolation {
 
   set OutputArray electrons
 
-#  set DeltaRMax 0.5
-  set DeltaRMax 0.
+  set DeltaRMax 0.5
 
   set PTMin 0.5
 
-  set PTRatioMax 0.12
+  set PTRatioMax 999
 }
 
 #################
@@ -549,7 +548,6 @@ module Isolation MuonIsolation {
   set OutputArray muons
 
   set DeltaRMax 0.5
-#  set DeltaRMax 0.
 
   set PTMin 0.5
 

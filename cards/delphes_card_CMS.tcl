@@ -513,12 +513,11 @@ module Isolation ElectronIsolation {
 
   set OutputArray electrons
 
-#  set DeltaRMax 0.5
-  set DeltaRMax 0.
+  set DeltaRMax 0.5
 
   set PTMin 0.5
 
-  set PTRatioMax 0.12
+  set PTRatioMax 999
 }
 
 #################
@@ -548,12 +547,11 @@ module Isolation MuonIsolation {
 
   set OutputArray muons
 
-#  set DeltaRMax 0.5
-  set DeltaRMax 0.
+  set DeltaRMax 0.5
 
   set PTMin 0.5
 
-  set PTRatioMax 0.25
+  set PTRatioMax 999
 }
 
 ###################
@@ -612,7 +610,7 @@ module FastJetFinder GenJetFinder {
 
   # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
   set JetAlgorithm 6
-  set ParameterR 0.5
+  set ParameterR 0.4
 
   set JetPTMin 20.0
 }
@@ -641,7 +639,7 @@ module FastJetFinder FastJetFinder {
 
   # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
   set JetAlgorithm 6
-  set ParameterR 0.5
+  set ParameterR 0.4
 
   set JetPTMin 20.0
 }
@@ -669,7 +667,7 @@ module FastJetFinder FatJetFinder {
 
   set ComputePruning 1
   set ZcutPrun 0.1
-  set RcutPrun 0.5
+  set RcutPrun 0.4
   set RPrun 0.8
 
   set ComputeSoftDrop 1
@@ -706,7 +704,7 @@ module JetFlavorAssociation JetFlavorAssociation {
   set ParticleLHEFInputArray Delphes/allParticlesLHEF
   set JetInputArray JetEnergyScale/jets
 
-  set DeltaR 0.5
+  set DeltaR 0.4
   set PartonPTMin 1.0
   set PartonEtaMax 2.5
 
@@ -785,12 +783,12 @@ module TreeWriter TreeWriter {
 # add Branch InputArray BranchName BranchClass
   add Branch Delphes/allParticles Particle GenParticle
 
-  add Branch TrackMerger/tracks Track Track
-  add Branch Calorimeter/towers Tower Tower
+#  add Branch TrackMerger/tracks Track Track
+#  add Branch Calorimeter/towers Tower Tower
 
-  add Branch HCal/eflowTracks EFlowTrack Track
-  add Branch ECal/eflowPhotons EFlowPhoton Tower
-  add Branch HCal/eflowNeutralHadrons EFlowNeutralHadron Tower
+#  add Branch HCal/eflowTracks EFlowTrack Track
+#  add Branch ECal/eflowPhotons EFlowPhoton Tower
+#  add Branch HCal/eflowNeutralHadrons EFlowNeutralHadron Tower
 
   add Branch GenJetFinder/jets GenJet Jet
   add Branch GenMissingET/momentum GenMissingET MissingET
@@ -800,7 +798,7 @@ module TreeWriter TreeWriter {
   add Branch UniqueObjectFinder/photons Photon Photon
   add Branch UniqueObjectFinder/muons Muon Muon
 
-  add Branch FatJetFinder/jets FatJet Jet
+#  add Branch FatJetFinder/jets FatJet Jet
 
   add Branch MissingET/momentum MissingET MissingET
   add Branch ScalarHT/energy ScalarHT ScalarHT

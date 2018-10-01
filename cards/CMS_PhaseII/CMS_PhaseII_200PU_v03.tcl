@@ -142,7 +142,7 @@ module PileUpMerger PileUpMerger {
   set VertexOutputArray vertices
 
   # pre-generated minbias input file
-  set PileUpFile /eos/cms/store/group/upgrade/delphes/PhaseII/MinBias_100k.pileup
+  set PileUpFile /afs/hephy.at/data/rschoefbeck01/TTXPheno/delphes_data/MinBias_100k.pileup
   #set PileUpFile MinBias.pileup
   
   # average expected pile up
@@ -4092,13 +4092,13 @@ module TreeWriter TreeWriter {
 
 
 # add Branch InputArray BranchName BranchClass
-  add Branch GenParticleFilter/filteredParticles Particle GenParticle
+#  add Branch GenParticleFilter/filteredParticles Particle GenParticle
   #add Branch Delphes/allParticles Particle GenParticle
-  add Branch PileUpMerger/vertices Vertex Vertex
+#  add Branch PileUpMerger/vertices Vertex Vertex
 
-  add Branch GenJetFinder/jets GenJet Jet
-  add Branch GenJetFinderAK8/jetsAK8 GenJetAK8 Jet
-  add Branch GenMissingET/momentum GenMissingET MissingET
+#  add Branch GenJetFinder/jets GenJet Jet
+#  add Branch GenJetFinderAK8/jetsAK8 GenJetAK8 Jet
+#  add Branch GenMissingET/momentum GenMissingET MissingET
 
 #  add Branch HCal/eflowTracks EFlowTrack Track
 #  add Branch ECal/eflowPhotons EFlowPhoton Tower
@@ -4112,20 +4112,20 @@ module TreeWriter TreeWriter {
   add Branch MuonTightIdEfficiency/muons MuonTight Muon
 
 #  add Branch PhotonEfficiencyCHS/photons PhotonCHS Photon
-  add Branch ElectronEfficiencyCHS/electrons ElectronCHS Electron
-  add Branch MuonLooseIdEfficiencyCHS/muons MuonLooseCHS Muon
-  add Branch MuonTightIdEfficiencyCHS/muons MuonTightCHS Muon
+#  add Branch ElectronEfficiencyCHS/electrons ElectronCHS Electron
+#  add Branch MuonLooseIdEfficiencyCHS/muons MuonLooseCHS Muon
+#  add Branch MuonTightIdEfficiencyCHS/muons MuonTightCHS Muon
 
-  add Branch JetEnergyScale/jets Jet Jet
+#  add Branch JetEnergyScale/jets Jet Jet
   add Branch JetEnergyScalePUPPI/jets JetPUPPI Jet
-  add Branch JetEnergyScaleAK8/jets JetAK8 Jet
-  add Branch JetEnergyScalePUPPIAK8/jets JetPUPPIAK8 Jet
+#  add Branch JetEnergyScaleAK8/jets JetAK8 Jet
+#  add Branch JetEnergyScalePUPPIAK8/jets JetPUPPIAK8 Jet
 
-  add Branch Rho/rho Rho Rho
+#  add Branch Rho/rho Rho Rho
 
-  add Branch MissingET/momentum MissingET MissingET
+#  add Branch MissingET/momentum MissingET MissingET
   add Branch PuppiMissingET/momentum PuppiMissingET MissingET
-  add Branch GenPileUpMissingET/momentum GenPileUpMissingET MissingET
-  add Branch ScalarHT/energy ScalarHT ScalarHT
+#  add Branch GenPileUpMissingET/momentum GenPileUpMissingET MissingET
+#  add Branch ScalarHT/energy ScalarHT ScalarHT
 
 }

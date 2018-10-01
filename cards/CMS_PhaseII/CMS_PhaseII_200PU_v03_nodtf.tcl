@@ -135,7 +135,7 @@ module PileUpMerger PileUpMerger {
   set VertexOutputArray vertices
 
   # pre-generated minbias input file
-  set PileUpFile /eos/cms/store/group/upgrade/delphes/PhaseII/MinBias_100k.pileup
+  set PileUpFile /afs/hephy.at/data/rschoefbeck01/TTXPheno/delphes_data/MinBias_100k.pileup
   #set PileUpFile MinBias.pileup
   
   # average expected pile up

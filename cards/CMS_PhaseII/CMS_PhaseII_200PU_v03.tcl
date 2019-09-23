@@ -4092,11 +4092,11 @@ module TreeWriter TreeWriter {
 
 
 # add Branch InputArray BranchName BranchClass
-#  add Branch GenParticleFilter/filteredParticles Particle GenParticle
+  add Branch GenParticleFilter/filteredParticles Particle GenParticle
   #add Branch Delphes/allParticles Particle GenParticle
 #  add Branch PileUpMerger/vertices Vertex Vertex
 
-#  add Branch GenJetFinder/jets GenJet Jet
+  add Branch GenJetFinder/jets GenJet Jet
 #  add Branch GenJetFinderAK8/jetsAK8 GenJetAK8 Jet
 #  add Branch GenMissingET/momentum GenMissingET MissingET
 

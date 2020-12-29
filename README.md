@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/delphes/delphes.svg?style=shield)](https://circleci.com/gh/delphes/delphes)
+[![CircleCI](https://circleci.com/gh/delphes/delphes.svg?style=shield)](https://circleci.com/gh/delphes/delphes) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3735069.svg)](https://doi.org/10.5281/zenodo.3735069)
 
 Delphes
 =======
@@ -13,15 +13,15 @@ Quick start with Delphes
 Commands to get the code:
 
 ```
-   wget http://cp3.irmp.ucl.ac.be/downloads/Delphes-3.4.1.tar.gz
+   wget http://cp3.irmp.ucl.ac.be/downloads/Delphes-3.4.2.tar.gz
 
-   tar -zxf Delphes-3.4.1.tar.gz
+   tar -zxf Delphes-3.4.2.tar.gz
 ```
 
 Commands to compile the code:
 
 ```
-   cd Delphes-3.4.1
+   cd Delphes-3.4.2
 
    make
 ```
@@ -88,8 +88,8 @@ Start ROOT and load Delphes shared library:
 Open ROOT file and do some basic analysis using Draw or TBrowser:
 
 ```
-   TFile::Open("delphes_output.root");
-   Delphes->Draw("Electron.PT");
+   TFile *f = TFile::Open("delphes_output.root");
+   f->Get("Delphes")->Draw("Electron.PT");
    TBrowser browser;
 ```
 
